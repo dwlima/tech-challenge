@@ -3,11 +3,7 @@ const recipeService = require('../services/RecipeService');
 
 module.exports = {
 
-    async index(req, res, next) {
-        /*
-		const  { userid } = req.params;
-        const items = await Address.find({user: userid }).sort('-name');
-        */
+    async return_example(req, res, next) {
 
         var items = {
             "keywords": ["onion", "tomato"],
@@ -24,7 +20,6 @@ module.exports = {
             }
             ]
         }
-
 		return res.json(items);
 
     },
@@ -32,14 +27,10 @@ module.exports = {
     async getRecipes(req, res, next) {
 
         try {
-
             const ing = req.query.i;
             const recipes = await recipeService.getRecipes(ing);
-
             return res.json(recipes);
-
         } catch(err) {
-            console.log("error");
             console.log(err);
             if (err instanceof ExternalError) {
                 res.status(502).json({ errors: [err] });
