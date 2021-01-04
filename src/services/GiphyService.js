@@ -27,7 +27,7 @@ module.exports = {
                 res.status(502).json({ errors: [err] });
                 return;
             } else {
-                res.status(422).json(err);
+                res.status(400).json(err);
             }         
         }
     }

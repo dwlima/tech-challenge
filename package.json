@@ -4,7 +4,8 @@
   "description": "[DELIVERY MUCH] Tech Challenge Backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r esm './src/test/*.js' --timeout 0 --exit",
+    "start": "node -r esm src/server.js",
     "dev": "nodemon ./src/server.js"
   },
   "repository": {
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/dwlima/tech-challenge#readme",
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^7.17.0",
+    "mocha": "^8.2.1",
     "nodemon": "^2.0.6"
   },
   "dependencies": {

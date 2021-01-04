@@ -56,7 +56,6 @@ module.exports = {
             };
 
         } catch (err) {
-            console.log(err);
             const message = 'Não foi possível acessar a API para gerar o gif.';
             const dependency = 'Giphy';
             throw new ExternalError(message, dependency);

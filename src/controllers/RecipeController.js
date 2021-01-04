@@ -31,12 +31,11 @@ module.exports = {
             const recipes = await recipeService.getRecipes(ing);
             return res.json(recipes);
         } catch(err) {
-            console.log(err);
             if (err instanceof ExternalError) {
-                res.status(502).json({ errors: [err] });
+                res.status(502).json({ error: err});
                 return;
             } else {
-                res.status(422).json(err);
+                res.status(400).json(err);
             }         
         }
     }

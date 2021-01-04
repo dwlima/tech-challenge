@@ -21,7 +21,7 @@ module.exports = {
     }
 
     if(error){
-      return res.json({error: 'true', message});
+      return res.status(400).json({error: 'true', message});
     } else {
       next();
     }
