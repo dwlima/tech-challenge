@@ -1,0 +1,29 @@
+{
+  "name": "tech-challenge",
+  "version": "1.0.0",
+  "description": "[DELIVERY MUCH] Tech Challenge Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwlima/tech-challenge.git"
+  },
+  "author": "Dayvid Lima <dwlima@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwlima/tech-challenge/issues"
+  },
+  "homepage": "https://github.com/dwlima/tech-challenge#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  }
+}
