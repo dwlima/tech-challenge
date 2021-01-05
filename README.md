@@ -5,7 +5,7 @@ API que recebe ingredientes como parâmetro de entrada em uma chamada GET e reto
 ## Configuração
 Duplique o arquivo .env.example na raiz do projeto e renomeie para .env:
 
-Substitua YOUR_GIPHY_API_KEY para o a sua chave de API do GIPHY.
+Dentro do arquivo .env substitua YOUR_GIPHY_API_KEY para o a sua chave de API do GIPHY.
 
 
 ## Build
