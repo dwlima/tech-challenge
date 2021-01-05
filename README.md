@@ -64,19 +64,17 @@ http://localhost:8080/recipes/?i={ingredient_1},{ingredient_2}
 (note que talvez tenha que substituir o localhost pelo ip atribuido ao docker)
 
 
-Para parar o projeto rode:
-
-``` shell
-docker stop {container_name}
-```
-
-
 Nas próximas vezes que quiser rodar o projeto basta executar:
 
 ``` shell
 docker start {container_name}
 ```
 
+Para parar de rodar o projeto execute:
+
+``` shell
+docker stop {container_name}
+```
 
 
 
