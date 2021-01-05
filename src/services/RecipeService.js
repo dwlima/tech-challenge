@@ -42,9 +42,8 @@ module.exports = {
 
     try {
       if (recipes && recipes.length > 0) {
-        const promises = recipes.map(async (rec, idx) => 
-          rec.gif = await GiphyService.getGif(rec.title)
-        );
+        // eslint-disable-next-line no-return-assign, no-param-reassign
+        const promises = recipes.map(async (rec) => rec.gif = await GiphyService.getGif(rec.title));
         await Promise.all(promises);
       }
       return {
