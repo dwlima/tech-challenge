@@ -1,30 +1,28 @@
-const { query } = require('express-validator');
-
+// const { query } = require('express-validator');
 
 module.exports = {
-
+  // eslint-disable-next-line consistent-return
   queryValidator(req, res, next) {
-    var error = message = false;
+    let error = false;
+    let message = '';
 
-
-    if(!req.query.i) {
-      error = true,
+    if (!req.query.i) {
+      error = true;
       message = 'Você precisa informar o campo i com os ingredientes para a busca';
     } else {
-      var ingredients = req.query.i;
-      var ingredientsArray = ingredients.split(',');
+      const ingredients = req.query.i;
+      const ingredientsArray = ingredients.split(',');
 
-      if((ingredientsArray.length < 1) || (ingredientsArray.length > 3)){
+      if ((ingredientsArray.length < 1) || (ingredientsArray.length > 3)) {
         error = true;
         message = 'Você deve informar de 1 a 3 ingredientes separados por virgula no campo i';
       }
     }
 
-    if(error){
-      return res.status(400).json({error: 'true', message});
-    } else {
+    if (!error) {
       next();
+    } else {
+      return res.status(400).json({ error: 'true', message });
     }
-
-  }
-}
+  },
+};
