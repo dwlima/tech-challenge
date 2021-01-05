@@ -40,24 +40,21 @@ module.exports = {
   async getRecipes(ingredients) {
     const recipes = await getRecipesFromApi(ingredients);
 
-    if (recipes && recipes.length > 0) {
-      try {
+    try {
+      if (recipes && recipes.length > 0) {
         const promises = recipes.map(async (rec, idx) => 
           rec.gif = await GiphyService.getGif(rec.title)
         );
         await Promise.all(promises);
-
-        return {
-          keywords: ingredients,
-          recipes,
-        };
-      } catch (err) {
-        const message = 'Não foi possível acessar a API para gerar o gif.';
-        const dependency = 'Giphy';
-        throw new ExternalError(message, dependency);
       }
-    } else {
-      return null;
+      return {
+        keywords: ingredients,
+        recipes,
+      };
+    } catch (err) {
+      const message = 'Não foi possível acessar a API para gerar o gif.';
+      const dependency = 'Giphy';
+      throw new ExternalError(message, dependency);
     }
   },
 };

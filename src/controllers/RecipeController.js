@@ -24,11 +24,7 @@ module.exports = {
     try {
       const ing = req.query.i;
       const recipes = await recipeService.getRecipes(ing);
-      if (recipes && recipes.keywords && recipes.recipes) {
-        return res.json(recipes);
-      } else {
-        return res.status(200).json( { msg: 'Não foram encontradas receitas' } );
-      }
+      return res.json(recipes);
     } catch (err) {
       return res.status(400).json(err);
     }
