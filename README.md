@@ -14,6 +14,10 @@ Abra seu terminal na pasta do projeto e execute:
 ``` shell
 npm install
 ```
+ou
+``` shell
+yarn install
+```
 
 ## Rodar o projeto
 Para rodar o projeto basta executar no terminal na pasta raiz do projeto o comando:
@@ -21,6 +25,12 @@ Para rodar o projeto basta executar no terminal na pasta raiz do projeto o coman
 ``` shell
 npm start
 ```
+ou
+
+``` shell
+yarn start
+```
+
 
 A aplicação poderá ser acessada em: http://localhost:3000/recipes/?i={ingredient_1},{ingredient_2}
 
@@ -29,6 +39,11 @@ A aplicação poderá ser acessada em: http://localhost:3000/recipes/?i={ingredi
 Para rodar os testes execute o comando:
 ``` shell
 npm test
+```
+ou
+
+``` shell
+yarn start
 ```
 
 
