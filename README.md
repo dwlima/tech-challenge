@@ -43,7 +43,7 @@ npm test
 ou
 
 ``` shell
-yarn start
+yarn test
 ```
 
 
